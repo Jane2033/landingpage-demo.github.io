@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header{
+    @apply fixed top-0 left-0 w-full z-50 text-white;
+}
+
+.sticky{
+    @apply bg-gradient-to-r from-pink-450 to-red-300 shadow-md;    
+}
+
+*{
+    @apply scroll-smooth;
+}
+
+/*@media (min-width: 1024px) {
+    .circle{
+        @apply absolute -top-48 -left-40 overflow-hidden;
+    }
+
+    .topright{
+        @apply inline-block absolute top-0 right-0 overflow-hidden;
+    }
+
+    .bottomleft{
+        @apply absolute left-0 mt-96 py-48 scale-110;
+    }
+}*/
+
+
+
+
+.act{
+    @apply block;
+}
+
+.title{
+    @apply z-30;
+}
+
+.jump{
+    @apply z-10;
+}
+
+
+.ribbon1{
+    @apply absolute top-0 left-0 rotate-12 z-10;
+}
+
+.ribbon2{
+    @apply absolute top-0 left-0 -rotate-45 z-20;
+}
+
+.ribbon3{
+    @apply absolute top-0 right-0 rotate-45 z-30;
+}
+
+.smooth-scroll{
+    @apply relative overflow-hidden w-full bg-gradient-to-br from-pink-450 via-purple-350 to-red-400;
+}
