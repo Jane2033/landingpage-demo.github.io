@@ -74,39 +74,18 @@
             </div>
         </div>
     </header>
-    
-    <!--<section id="Home" class="relative flex bg-gradient-to-b from-blue-150 to-blue-150/0 mb-80">
-		<div class="grid grid-cols-12 p-12 lg:p-24 z-30">	
-            <div class="col-span-12 mt-12 md:col-span-6 relative title">
-                <div class="text-white font-quiche">
-                    <h1 class="text-6xl sm:text-8xl md:text-7xl xl:text-8xl">All you need<br>all unique</h1>
-                </div>
-                <div class="flex justify-center sm:justify-start mt-9 xl:mt-16">
-                    <button class="px-8 py-3 rounded-md text-base my-3 mr-5 tracking-wider bg-pink-550 text-white md:text-sm md:px-5 xl:px-8 xl:text-base hover:shadow-lg hover:bg-pink-400 transition-colors">加 入 會 員</button>
-                    <button class="px-8 py-3 border rounded-md text-base my-3 tracking-wider text-white md:text-sm md:px-5 xl:px-8 xl:text-base hover:bg-white/5 hover:backdrop-blur-lg hover:shadow-lg transition-colors"><span>開 始 購 物</span></button>
-                </div>
-                <img src="src/img/topleft.png" class="hidden md:flex md:scale-90 md:-mx-14 md:-my-10 cursor-pointer">
-            </div>	
-            <div class="col-span-12 md:col-span-6 md:col-start-7">
-                <img src="src/img/jump.png" class="jump">                
-            </div>
-        </div>           
-        <div class="z-10">                
-            <img src="src/img/circle.png" class="flex absolute -top-10 -left-12 scale-150 blur-3xl md:-top-48 md:-left-44 md:scale-100 xl:-top-80 xl:-left-56 xl:scale-95 ">
-            <img src="src/img/TopRight.png" class="hidden md:flex md:absolute md:top-0 md:-right-32 lg:-right-20 xl:-right-10">
-        </div>
-	</section>-->
 
-    <section id="smooth-scroll" class="smooth-scroll">
-        <div class="scroll-container">
+<div class="smooth-scroll">
+    <section class="relative overflow-hidden w-full bg-gradient-to-br from-pink-450 via-purple-350 to-red-400 py-24">
+        <div class="hero-header">
             <div class="ribbons-wrapper">
-                <img src="src/img/ribbon.jpg" id="ribbon1" class="ribbon1">
-                <img src="src/img/ribbon.jpg" id="ribbon2" class="ribbon2">
-                <img src="src/img/ribbon.jpg" id="ribbon3" class="ribbon3">
+                <img src="src/img/ribbon.jpg" id="ribbon1" class="ribbon1 hero-header absolute top-0 left-0 z-10">
+                <img src="src/img/ribbon.jpg" id="ribbon2" class="ribbon2 hero-header absolute top-0 left-0 z-20">
+                <img src="src/img/ribbon.jpg" id="ribbon3" class="ribbon3 hero-header absolute top-0 right-0 z-30">
             </div>
             <div class="pin-wrapper flex flex-col items-center">
-                <div class="flex justify-center">
-                    <img src="src/img/pin.png" class="scale-75">
+                <div class="flex justify-center image-wrapper" id="heroImage">
+                    <img src="src/img/pin.png" class="scale-75 image">
                 </div>
                 <div class="flex justify-between w-96 text-white -mt-12">
                     <button class="relative hover:-translate-y-2 transition-transform">
@@ -600,6 +579,7 @@
             </div>
         </div>
     </section>
+</div>  
     
     <footer class="flex justify-center align-middle flex-col bg-gradient-to-br from-pink-450 via-purple-350 to-red-300 text-white font-Poppins relative">
 		<div id="newsletter" class="grid xl:grid-cols-2 justify-center items-center mx-24 py-24 relative">
@@ -652,7 +632,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="src/locomotive-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <!--<script type="text/javascript">
 		const bar = document.getElementById('bar');
 		const nav = document.getElementById('navbar');
@@ -677,10 +657,7 @@
 	</script>-->
 
 
-
-
-
-    <script src="src/index.js"></script>
+    <script src="src/index.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>

@@ -44,18 +44,3 @@ header{
 }
 
 
-.ribbon1{
-    @apply absolute top-0 left-0 rotate-12 z-10;
-}
-
-.ribbon2{
-    @apply absolute top-0 left-0 -rotate-45 z-20;
-}
-
-.ribbon3{
-    @apply absolute top-0 right-0 rotate-45 z-30;
-}
-
-.smooth-scroll{
-    @apply relative overflow-hidden w-full bg-gradient-to-br from-pink-450 via-purple-350 to-red-400;
-}

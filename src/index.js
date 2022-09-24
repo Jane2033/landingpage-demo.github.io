@@ -1,50 +1,71 @@
-        gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
+  
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector(".smooth-scroll"),
+  smooth: true,
+  lerp: 0.08,
+});
 
-        import LocomotiveScroll from 'locomotive-scroll';
+locoScroll.on("scroll", ScrollTrigger.update);
 
-        const locoScroll = new LocomotiveScroll({
-            el: document.querySelector(".smooth-scroll"),
-            smooth: true,
-            lerp: 0.08,
-        });
+ScrollTrigger.scrollerProxy(".smooth-scroll", {
+  scrollTop(value) {
+    return arguments.length
+      ? locoScroll.scrollTo(value, 0, 0)
+      : locoScroll.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      top: 0,
+      left: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+  pinType: document.querySelector(".smooth-scroll").style.transform
+    ? "transform"
+    : "fixed",
+});
 
-        locoScroll.on("scroll", ScrollTrigger.update);
+const vw = (coef) => window.innerWidth * (coef / 100);
+const vh = (coef) => window.innerHeight * (coef / 100);
 
-        ScrollTrigger.scrollerProxy("#smooth-scroll", {
-            scrollTop(value) {
-              return arguments.length ? locoScroll.scrollTo(value, {duration: 0, disableLerp: true}) : locoScroll.scroll.instance.scroll.y;
-            },
-            getBoundingClientRect() {
-              return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-            },
-            pinType: document.querySelector("#smooth-scroll").style.transform ? "transform" : "fixed",
-        });
+const heroScroller = gsap.timeline({
+  paused: true,
+  scrollTrigger: {
+    trigger: ".hero-header",
+    scroller: ".smooth-scroll",
+    pin: ".pin-wrapper",
+    start: "top 10%",
+    scrub: true,
+    end: `${vh(100)}`,
+  },
+});
+
+heroScroller
+  .to(
+    [".hero-header.ribbon1", ".hero-header.ribbon3"],
+    {
+      scale: 0,
+      y: vh(150),
+      xPercent: -150,
+    },
+    "heroScroll"
+  )
+  .to(
+    ".hero-header.ribbon2",
+    {
+      scale: 0,
+      y: vh(150),
+      xPercent: 150,
+    },
+    "heroScroll"
+  );
+
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ScrollTrigger.refresh();
 
 
-        var tl = gsap.timeline({
-            paused: true,
-            scrollTrigger: {
-              trigger: ".pin-wrapper",
-              scroller: "#smooth-scroll",
-              scrub: true,
-              pin: true,
-              start: "top top",
-              end: "+=100%",
-              onUpdate() {
-                console.log("Update")
-              }
-            }
-          });
-        
-        tl.from("#ribbon1", {
-            scale: 0.3, 
-        })
-          .from("#ribbon2", {
-            x: -400,
-        });
-
-        ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-        ScrollTrigger.refresh();
 /*  
 
         const vw = (coef) => window.innerWidth * (coef / 100);
