@@ -27,6 +27,8 @@ module.exports = {
       },
       spacing: {
         '85vh': '85vh',
+        '150vh': '150vh',
+        '200vh': '200vh',
         '250vh': '250vh',
       },
       gridTemplateRows: {

@@ -82,6 +82,13 @@ heroScroller
       xPercent: -150,
     },
     "heroScroll"
+  )
+  .to(
+    ".pin-wrapper",
+    {
+      y: -100,
+    },
+    "heroScroll"
   );
 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
