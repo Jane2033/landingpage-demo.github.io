@@ -35,7 +35,7 @@ const heroScroller = gsap.timeline({
   scrollTrigger: {
     trigger: ".hero-header",
     scroller: ".smooth-scroll",
-    pin: ".pin-wrapper",
+    pin: true,
     start: "top 10%",
     scrub: true,
     end: `${vh(100)}`,
@@ -44,10 +44,9 @@ const heroScroller = gsap.timeline({
 
 heroScroller
   .to(
-    [".hero-header.ribbon1", ".hero-header.ribbon3"],
+    ".hero-header.ribbon1",
     {
-      scale: 0,
-      y: vh(150),
+      y: -vh(150),
       xPercent: -150,
     },
     "heroScroll"
@@ -55,9 +54,32 @@ heroScroller
   .to(
     ".hero-header.ribbon2",
     {
-      scale: 0,
       y: vh(150),
       xPercent: 150,
+    },
+    "heroScroll"
+  )
+  .to(
+    ".hero-header.ribbon3",
+    {
+      y: vh(150),
+      xPercent: -150,
+    },
+    "heroScroll"
+  )
+  .to(
+    ".hero-header.ribbon4",
+    {
+      y: vh(150),
+      xPercent: -150,
+    },
+    "heroScroll"
+  )
+  .to(
+    ".hero-header.ribbon5",
+    {
+      y: -vh(100),
+      xPercent: -150,
     },
     "heroScroll"
   );
