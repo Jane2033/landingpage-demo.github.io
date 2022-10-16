@@ -6,9 +6,14 @@ header{
     @apply fixed top-0 left-0 w-full z-50 text-white;
 }
 
-.sticky{
-    @apply bg-gradient-to-r from-pink-450 to-red-300 shadow-md;    
+.normal{
+    @apply absolute top-250vh left-0 w-full z-50 justify-between items-baseline p-5 bg-gradient-to-r from-blue-150 via-red-400 to-pink-200 text-white hidden lg:flex;
 }
+
+.normal2{
+    @apply fixed top-0 left-0 w-full z-50 justify-between items-baseline p-5 bg-gradient-to-r from-blue-150 via-red-400 to-pink-200 text-white hidden lg:flex;
+}
+
 
 *{
     @apply scroll-smooth;
@@ -27,7 +32,6 @@ header{
         @apply absolute left-0 mt-96 py-48 scale-110;
     }
 }*/
-
 
 
 

@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@splinetool/runtime": "^0.9.123",
     "gh-pages": "^4.0.0",
     "locomotive-scroll": "^4.1.4"
   },

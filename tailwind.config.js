@@ -30,6 +30,10 @@ module.exports = {
         '150vh': '150vh',
         '200vh': '200vh',
         '250vh': '250vh',
+        '500vh': '500vh',
+        '120%': '120%',
+        '10%': '10%',
+        '15%': '15%',
       },
       gridTemplateRows: {
         '8': 'repeat(8, minmax(0, 0.5fr))',
